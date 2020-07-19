@@ -1,6 +1,6 @@
 {
   "ver": "2.3.5",
-  "uuid": "5d12a067-cca0-4c59-84a5-3413217017cb",
+  "uuid": "dff90143-63b9-444b-8211-0cb52b686cc6",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -13,8 +13,8 @@
   "subMetas": {
     "goldcoin": {
       "ver": "1.0.4",
-      "uuid": "3b860d95-1761-42fc-a59b-77aa77723f41",
-      "rawTextureUuid": "5d12a067-cca0-4c59-84a5-3413217017cb",
+      "uuid": "94f3b318-84aa-4be5-8d1b-dbf1c16664fc",
+      "rawTextureUuid": "dff90143-63b9-444b-8211-0cb52b686cc6",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
