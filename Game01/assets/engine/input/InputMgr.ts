@@ -1,3 +1,125 @@
 export default class InputMgr {
-    
+    Init(): void {
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+    }
+    onKeyDown(event): void {
+        switch(event.keyCode) {
+            case KeyCode.a:
+                console.log('Press a key');
+                break;
+        }
+    }
+
+    onKeyUp(event): void {
+        switch(event.keyCode) {
+            case KeyCode.a:
+                console.log('release a key');
+                break;
+        }
+    }
 }
+
+export enum KeyCode {			
+    none = 0,
+    back = 0,
+    menu = 0,
+    backspace = 0,
+    tab = 0,
+    enter = 0,
+    shift = 0,
+    ctrl = 0,
+    alt = 0,
+    pause = 0,
+    capslock = 0,
+    escape = 0,
+    space = 0,
+    pageup = 0,
+    pagedown = 0,
+    end = 0,
+    home = 0,
+    left = 0,
+    up = 0,
+    right = 0,
+    down = 0,
+    select = 0,
+    insert = 0,
+    Delete = 0,
+    a = 0,
+    b = 0,
+    c = 0,
+    d = 0,
+    e = 0,
+    f = 0,
+    g = 0,
+    h = 0,
+    i = 0,
+    j = 0,
+    k = 0,
+    l = 0,
+    m = 0,
+    n = 0,
+    o = 0,
+    p = 0,
+    q = 0,
+    r = 0,
+    s = 0,
+    t = 0,
+    u = 0,
+    v = 0,
+    w = 0,
+    x = 0,
+    y = 0,
+    z = 0,
+    num0 = 0,
+    num1 = 0,
+    num2 = 0,
+    num3 = 0,
+    num4 = 0,
+    num5 = 0,
+    num6 = 0,
+    num7 = 0,
+    num8 = 0,
+    num9 = 0,
+    '*' = 0,
+    '+' = 0,
+    '-' = 0,
+    numdel = 0,
+    '/' = 0,
+    f1 = 0,
+    f2 = 0,
+    f3 = 0,
+    f4 = 0,
+    f5 = 0,
+    f6 = 0,
+    f7 = 0,
+    f8 = 0,
+    f9 = 0,
+    f10 = 0,
+    f11 = 0,
+    f12 = 0,
+    numlock = 0,
+    scrolllock = 0,
+    ';' = 0,
+    semicolon = 0,
+    equal = 0,
+    '=' = 0,
+    ',' = 0,
+    comma = 0,
+    dash = 0,
+    '.' = 0,
+    period = 0,
+    forwardslash = 0,
+    grave = 0,
+    '[' = 0,
+    openbracket = 0,
+    backslash = 0,
+    ']' = 0,
+    closebracket = 0,
+    quote = 0,
+    dpadLeft = 0,
+    dpadRight = 0,
+    dpadUp = 0,
+    dpadDown = 0,
+    dpadCenter = 0,		
+}	

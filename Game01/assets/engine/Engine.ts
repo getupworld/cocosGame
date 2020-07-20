@@ -1,4 +1,5 @@
 import Log,{LogLevel} from "./log/Log";
+import EventMgr from "./event/EventMgr";
 import UpdateMgr from "./update/UpdateMgr";
 import StoryMgr from "./story/StoryMgr";
 import EngineSetting from "./setting/EngineSetting";
@@ -6,9 +7,11 @@ import CocosSetting from "./setting/CocosSetting";
 
 
 
+
 export default class Engine {
     static root_node: cc.Node;
     static log: Log;
+    static event_mgr: EventMgr;
     static update_mgr: UpdateMgr;
     static story_mgr: StoryMgr;
     static engine_setting: EngineSetting;
@@ -26,8 +29,12 @@ export default class Engine {
         cc.game.addPersistRootNode(Engine.root_node);
 
         // log
-        this.log =new Log();
-        this.log.Init();
+        Engine.log =new Log();
+        Engine.log.Init();
+
+        //eventMge
+        Engine.event_mgr = new EventMgr();
+        Engine.event_mgr.Init();
 
         // 添加Updater用于驱动游戏逻辑
         Engine.root_node.addComponent("Updater");
@@ -45,21 +52,22 @@ export default class Engine {
         Engine.cocos_setting.Init();
     }
     static Update(dt: number): void {
-
+        Engine.update_mgr.Update(dt);
     }
     // log
     static LogInfo(info: string): void {this.log.LogInfo(info);}
     static LogDebug(info: string): void {this.log.LogDebug(info);}
     static LogWarn(info: string): void {this.log.LogWarn(info);}
     static LogError(info: string): void {this.log.LogError(info);}
-
-    //update
+    // event
+    static get EventMgr(): EventMgr {return Engine.event_mgr;}
+    // update
     static AddUpdate(obj: any): void {Engine.update_mgr.AddUpdate(obj);}
     static DelUpdate(obj: any): void {Engine.update_mgr.DelUpdate(obj);}
 
-    //story
+    // story
     static get StoryMgr(): StoryMgr {return Engine.story_mgr;}
-    static RegisterStory(name: string, callback: any): void {Engine.story_mgr.Register(name, callback);}
+    static RegisterStory(name: string, callback: Function): void {Engine.story_mgr.Register(name, callback);}
     static UnregisterStory(name: string): void {Engine.story_mgr.Unregister(name);}
     
     

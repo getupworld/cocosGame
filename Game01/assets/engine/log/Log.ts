@@ -12,8 +12,8 @@ export default class Log {
 
     Log(lv: LogLevel, info: string): void {
         this.logs.get(lv).push(info);
-        cc.log(info);
-        //console.log(info);
+        console.log(info);
+        //cc.log(info);
     }
     LogInfo(info: string): void {
         this.Log(LogLevel.Info, info);
