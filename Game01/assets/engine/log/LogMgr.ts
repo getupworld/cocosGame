@@ -1,5 +1,5 @@
 
-export default class Log {
+export default class LogMgr {
     logs: Map<LogLevel, Array<string>>;
 
     Init(): void {

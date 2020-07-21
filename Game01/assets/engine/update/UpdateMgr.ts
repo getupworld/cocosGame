@@ -29,7 +29,7 @@ export default class UpdateMgr {
             this.del_update_list.pop();
         }
         this.updates.forEach(function(obj){
-            obj.update(dt);
+            obj.Update(dt);
         })
     }
 }
