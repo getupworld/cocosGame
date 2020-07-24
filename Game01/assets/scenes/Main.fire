@@ -58,7 +58,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "autoReleaseAssets": true,
-    "_id": "6653c365-4444-4380-b244-ef79516a9a06"
+    "_id": "bf3ccf60-740b-470c-a8d5-db2d2ff7b4f1"
   },
   {
     "__type__": "cc.Node",
@@ -123,13 +123,13 @@
     "_id": "72Vtjnby5Cm5fv14TOwyGf"
   },
   {
-    "__type__": "3ade5f1CLRBxL3xUp8FYiGE",
+    "__type__": "d0fd3OWw45A84SrER1hVxdA",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "_id": "4ebv06LjFGi7Nba++2Db0R"
+    "_id": "d4uC6HVCJA17H+Sw3sEDOc"
   }
 ]
