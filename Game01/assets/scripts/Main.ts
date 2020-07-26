@@ -1,5 +1,5 @@
 import Engine from "../engine/Engine";
-import {Init as StoryInit}  from "../stories/Init";
+import {Init as StoryInit}  from "./stories/Init";
 const {ccclass} = cc._decorator;
 
 @ccclass
@@ -8,7 +8,7 @@ export default class Main extends cc.Component {
         // Init Core
         Engine.Init();
         StoryInit();
-        Engine.StoryMgr.Get("story_test")();
+        Engine.StoryMgr.Get("story_load_scene_plane")();
     }
 
 }
